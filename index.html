@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Formulário de adoção </h1>
+    <form id="formadocao">
+        <label for="nome"> Digite seu nome: </label>
+        <input id="nome" type="text"> <br>
+
+        <label for="email"> Insira seu e-mail: </label>
+        <input id="email" type="text"> <br>
+
+        <label for="numero"> Insira seu número de telefone: </label>
+        <input id="numero" type="text"> <br>
+
+        <label for="idade"> Insira sua Idade: </label>
+        <input id="idade" type="number" max="120" min="1"> <br>
+
+        <label for="cpf"> Insira seu CPF: </label>
+        <input id="cpf" type="text"> <br>
+
+        <label for="cidade"> Insira sua Cidade: </label>
+        <input id="cidade" type="text"> <br>
+
+        <label> Complemento: </label> <br>
+        <input id="casa" type="radio" name="compl"> 
+        <label for="casa"> Casa </label> <br>
+        <input id="apartamento" type="radio" name="compl">
+        <label for="apartamento"> Apartamento </label> <br>
+
+        <label> Possui quintal? </label> <br>
+        <input id="QuintalSim" type="radio" name="quint"> 
+        <label for="QuintalSim"> Sim </label> <br>
+        <input id="QuintalNao" type="radio" name="quint">
+        <label for="QuintalNao"> Não </label> <br>
+
+        <label> Já teve pet antes? </label> <br>
+        <input id="AntesSim" type="radio" name="petan"> 
+        <label for="AntesSim"> Sim </label> <br>
+        <input id="AntesNao" type="radio" name="petan">
+        <label for="AntesNao"> Não </label> <br>
+
+        <label for="horas"> Quantas horas ele ficará sozinho: </label>
+        <input id="horas" type="number" max="24" min="0"> <br>
+
+        <label for="motive"> Descreva o motivo da adoção: (Max. 500 caracteres) </label> <br>
+        <textarea class="motivearea" name="motive" id="motive" maxlength="500"> </textarea> <br>
+
+        <label for="terms"> Você aceita os termos de responsabilidade? </label>
+        <input id="terms" type="checkbox"> <br>
+        <input type="submit">
+
+        <script src="scripts.js"> </script>
+    </form>
+</body>
+</html>
