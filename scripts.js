@@ -26,9 +26,15 @@ document.getElementById("formadocao").addEventListener("submit", function(e){
         }
     counter += 1;
     }
-    if (EmailValidator == 0) return alert("E-mail Inválido")
-
+    if (EmailValidator == 0) return alert("E-mail Inválido");
+    if (numero.length < 8) return alert("Número Inválido");
+    if (idade < 18) return alert("Você precisa de 18 anos ou mais para adotar");
+    if (complemento == null) return alert("Informe o complemento");
+    if (quintal == null) return alert("Informe se tem um quintal");
+    if (antes == null) return alert("Informe se já teve um pet antes");
+    if (motivo.length < 10) return alert("Motivo muito curto. Insira pelo menos 10 caraceres.");
+    if (termos == null) return alert("CPF Inválido");
     
-        
+
     document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso!";
 })
