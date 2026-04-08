@@ -1,7 +1,7 @@
 body{
     display: flex;
     justify-content: center;
-    background-image: url("liq-p.jpg");
+    background-color: rgb(8, 59, 16);
     animation: Joshua 100s linear infinite;
     background-size: 160px;
 }

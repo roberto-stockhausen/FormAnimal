@@ -1,5 +1,8 @@
+let counter = 0;
+let EmailValidator = 0;
+
 document.getElementById("formadocao").addEventListener("submit", function(e){
-    e.preventDefault
+    e.preventDefault();
     let valid = true; // Variável que define se todas as informações estão válidas;
     let nome = document.getElementById("nome").value;
     let email = document.getElementById("email").value;
@@ -14,10 +17,18 @@ document.getElementById("formadocao").addEventListener("submit", function(e){
     let motivo = document.getElementById("motive").value;
     let termos = document.getElementById("terms").value;
 
-    if (nome.lenght < 30)
+    if (nome.length < 3) return alert("Nome Inválido");
+    
+    while (counter < email.length) // Eu podia ter usado o input email mas agora dane-se
     {
-        alert("Nome invalido");
-        valid = false;
+        if (email[counter] == "@" ){
+            EmailValidator = 1;
+        }
+    counter += 1;
     }
+    if (EmailValidator == 0) return alert("E-mail Inválido")
 
+    
+        
+    document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso!";
 })
