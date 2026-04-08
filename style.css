@@ -1,5 +1,39 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url("liq-p.jpg");
+    animation: Joshua 100s linear infinite;
+    background-size: 160px;
+}
 .motivearea{
     resize: none;
     width: 480px;
     height: 132px;
+}
+.question{
+    background-color: rgb(61, 114, 65);
+    padding: 12px;
+    margin: 6px;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.master{
+    background-color: rgb(48, 94, 51);
+    padding: 12px;
+    margin: 6px;
+    width: 640px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.image{
+    width: 160px;
+    height: 160px;
+    padding: 12px;
+    margin: 6px;
+    background-color: rgb(48, 94, 51);;
+}
+@keyframes Joshua {
+  from {background-position: top left;}
+  to {background-position: bottom right;}
 }

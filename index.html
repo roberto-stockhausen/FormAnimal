@@ -6,55 +6,71 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <img class="image" src="liq-p.jpg" alt="Liq">
+    <div class="master">
     <h1> Formulário de adoção </h1>
     <form id="formadocao">
+        <div class="question">
         <label for="nome"> Digite seu nome: </label>
         <input id="nome" type="text"> <br>
-
+        </div>
+        <div class="question">
         <label for="email"> Insira seu e-mail: </label>
         <input id="email" type="text"> <br>
-
+        </div>
+        <div class="question">
         <label for="numero"> Insira seu número de telefone: </label>
         <input id="numero" type="text"> <br>
-
+        </div>
+        <div class="question">
         <label for="idade"> Insira sua Idade: </label>
         <input id="idade" type="number" max="120" min="1"> <br>
-
+        </div>
+        <div class="question">
         <label for="cpf"> Insira seu CPF: </label>
         <input id="cpf" type="text"> <br>
-
+        </div>
+        <div class="question">
         <label for="cidade"> Insira sua Cidade: </label>
         <input id="cidade" type="text"> <br>
-
+        </div>
+        <div class="question">
         <label> Complemento: </label> <br>
         <input id="casa" type="radio" name="compl"> 
         <label for="casa"> Casa </label> <br>
         <input id="apartamento" type="radio" name="compl">
         <label for="apartamento"> Apartamento </label> <br>
-
+        </div>
+        <div class="question">
         <label> Possui quintal? </label> <br>
         <input id="QuintalSim" type="radio" name="quint"> 
         <label for="QuintalSim"> Sim </label> <br>
         <input id="QuintalNao" type="radio" name="quint">
         <label for="QuintalNao"> Não </label> <br>
-
+        </div>
+        <div class="question">
         <label> Já teve pet antes? </label> <br>
         <input id="AntesSim" type="radio" name="petan"> 
         <label for="AntesSim"> Sim </label> <br>
         <input id="AntesNao" type="radio" name="petan">
         <label for="AntesNao"> Não </label> <br>
-
+        </div>
+        <div class="question">
         <label for="horas"> Quantas horas ele ficará sozinho: </label>
         <input id="horas" type="number" max="24" min="0"> <br>
-
+        </div>
+        <div class="question">
         <label for="motive"> Descreva o motivo da adoção: (Max. 500 caracteres) </label> <br>
         <textarea class="motivearea" name="motive" id="motive" maxlength="500"> </textarea> <br>
-
+        </div>
+        <div class="question">
         <label for="terms"> Você aceita os termos de responsabilidade? </label>
         <input id="terms" type="checkbox"> <br>
-        <input type="submit">
-
+        <input type="submit" value="Enviar">
+        </div>
         <script src="scripts.js"> </script>
     </form>
+    </div>
+    <img class="image" src="liq-p.jpg" alt="Liq">
 </body>
 </html>
