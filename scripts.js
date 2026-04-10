@@ -46,7 +46,10 @@ console.log(termos);
     if (numero.length < 8) return alert("Número Inválido");
     if (idade < 18) return alert("Você precisa de 18 anos ou mais para adotar");
     if (complemento == null) return alert("Informe o complemento");
-    if (complemento.id == "apartamento" && permapartamento == null) return alert("Informe se o apartamento permite animais");
+    if (complemento.id == "apartamento" && permapartamento == null){
+    alert("Informe se o apartamento permite animais");
+    }
+    if (complemento.id == "apartamento" && permapartamento.id != null && permapartamento.id == "PermNao") return alert("O apartamento precisa permitir animais.");
     if (quintal == null) return alert("Informe se tem um quintal");
     if (quintal.id == "QuintalSim" && quintalseguro == null) return alert("Informe se o quintal é seguro");
     if (antes == null) return alert("Informe se já teve um pet antes");
