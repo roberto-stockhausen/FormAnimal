@@ -3,9 +3,12 @@ let EmailValidator = 0;
 const MotivosEstúpidos = [
     "Porque sim",
     "AAAAAAAAAA",
-    "Não estou afim",
+    "aaaaaaaaaa",
+    "Não vou falar",
     "Foda-se caralho",
-    "pq é fofo"]
+    "pq é fofinho",
+    "Insanidade"
+]
     // Cara eu acho que não existe forma melhor de detectar uma resposta genérica.
 
 
@@ -21,10 +24,13 @@ document.getElementById("formadocao").addEventListener("submit", function(e){
     let cidade = document.getElementById("cidade").value;
     let complemento = document.querySelector('input[name="compl"]:checked');
     let quintal = document.querySelector('input[name="quint"]:checked');
+    let quintalseguro = document.querySelector('input[name="segur"]:checked');
     let antes = document.querySelector('input[name="petan"]:checked');
     let horasozinho = document.getElementById("horas").value;
     let motivo = document.getElementById("motive").value;
     let termos = document.getElementById("terms").value;
+
+console.log(quintalseguro);
 
     if (nome.length < 3) return alert("Nome Inválido");
     
@@ -41,16 +47,16 @@ document.getElementById("formadocao").addEventListener("submit", function(e){
     if (complemento == null) return alert("Informe o complemento");
     if (complemento.id == "apartamento") return alert("Informe se o apartamento permite animais");
     if (quintal == null) return alert("Informe se tem um quintal");
+    if (quintal.id == "QuintalSim" && quintalseguro == null) return alert("Informe se o quintal é seguro");
     if (antes == null) return alert("Informe se já teve um pet antes");
     if (motivo.length < 10) return alert("Motivo muito curto. Insira pelo menos 10 caraceres.");
     counter = 0;
     while (counter < MotivosEstúpidos.length)
     {
-        if (motivo == MotivosEstúpidos[counter] ){
-            alert("Puta que pariu cara da um motivo decente");
-        }
+    if (motivo == MotivosEstúpidos[counter] ) return alert("Puta que pariu cara, dá um motivo decente");
     counter += 1;
     }
     if (termos == null) return alert("Você deve concordar com os termos.");
+
     document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso!";
 })
