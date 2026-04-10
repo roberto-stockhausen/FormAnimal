@@ -1,4 +1,4 @@
-body{
+.normal{
     display: flex;
     justify-content: center;
     background-color: rgb(8, 59, 16);
@@ -30,10 +30,16 @@ body{
     width: 160px;
     height: 160px;
     padding: 12px;
-    margin: 6px;
+    margin-top: 6px;
+    margin-bottom: 64px;
+    margin-left: 24px;
+    margin-right: 24px;
     background-color: rgb(48, 94, 51);;
 }
 @keyframes Joshua {
   from {background-position: top left;}
   to {background-position: bottom right;}
+}
+.jumpscare{
+width: 1200px
 }
