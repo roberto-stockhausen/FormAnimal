@@ -52,6 +52,7 @@ console.log(termos);
     if (complemento.id == "apartamento" && permapartamento.id != null && permapartamento.id == "PermNao") return alert("O apartamento precisa permitir animais.");
     if (quintal == null) return alert("Informe se tem um quintal");
     if (quintal.id == "QuintalSim" && quintalseguro == null) return alert("Informe se o quintal é seguro");
+    if (quintal.id == "QuintalSim" && quintalseguro != null && quintalseguro.id == "QuintalNaoSeguro") return alert("O quintal precisa ser seguro.");
     if (antes == null) return alert("Informe se já teve um pet antes");
     if (motivo.length < 10) return alert("Motivo muito curto. Insira pelo menos 10 caraceres.");
     counter = 0;
