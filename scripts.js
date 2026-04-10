@@ -1,6 +1,6 @@
 let counter = 0;
 let EmailValidator = 0;
-const MotivosEstúpidos = [
+const MotivosEstupidos = [
     "Porque sim",
     "AAAAAAAAAA",
     "aaaaaaaaaa",
@@ -23,14 +23,15 @@ document.getElementById("formadocao").addEventListener("submit", function(e){
     let cpf = document.getElementById("cpf").value;
     let cidade = document.getElementById("cidade").value;
     let complemento = document.querySelector('input[name="compl"]:checked');
+    let permapartamento = document.querySelector('input[name="permt"]:checked');
     let quintal = document.querySelector('input[name="quint"]:checked');
     let quintalseguro = document.querySelector('input[name="segur"]:checked');
     let antes = document.querySelector('input[name="petan"]:checked');
     let horasozinho = document.getElementById("horas").value;
     let motivo = document.getElementById("motive").value;
-    let termos = document.getElementById("terms").value;
+    let termos = document.querySelector('input[name="termo"]:checked');
 
-console.log(quintalseguro);
+console.log(termos);
 
     if (nome.length < 3) return alert("Nome Inválido");
     
@@ -45,15 +46,15 @@ console.log(quintalseguro);
     if (numero.length < 8) return alert("Número Inválido");
     if (idade < 18) return alert("Você precisa de 18 anos ou mais para adotar");
     if (complemento == null) return alert("Informe o complemento");
-    if (complemento.id == "apartamento") return alert("Informe se o apartamento permite animais");
+    if (complemento.id == "apartamento" && permapartamento == null) return alert("Informe se o apartamento permite animais");
     if (quintal == null) return alert("Informe se tem um quintal");
     if (quintal.id == "QuintalSim" && quintalseguro == null) return alert("Informe se o quintal é seguro");
     if (antes == null) return alert("Informe se já teve um pet antes");
     if (motivo.length < 10) return alert("Motivo muito curto. Insira pelo menos 10 caraceres.");
     counter = 0;
-    while (counter < MotivosEstúpidos.length)
+    while (counter < MotivosEstupidos.length)
     {
-    if (motivo == MotivosEstúpidos[counter] ) return alert("Puta que pariu cara, dá um motivo decente");
+    if (motivo == MotivosEstupidos[counter] ) return alert("Puta que pariu cara, dá um motivo decente");
     counter += 1;
     }
     if (termos == null) return alert("Você deve concordar com os termos.");
